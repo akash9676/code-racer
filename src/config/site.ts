@@ -50,8 +50,14 @@ export const siteConfig = {
       cacheRevalidationInterval: 86400, // 24hrs
     },
   },
+
+  multiplayer: {
+    maxParticipantsPerRace: 4,
+  },
 };
 
 export function getGitHubAuthorizationToken() {
-  return siteConfig.api.github.accessToken ? `Bearer ${siteConfig.api.github.accessToken}` : "";
+  return siteConfig.api.github.accessToken
+    ? `Bearer ${siteConfig.api.github.accessToken}`
+    : "";
 }
